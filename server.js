@@ -23,11 +23,9 @@ db.sequelize.sync().then(() => {
 
 require('./app/routes/auth.routes')(app);
 
-require('./app/routes/user.routes')(app);
-
 // simple route
 app.get("/", (req, res) => {
-   res.json({ message: "Welcome to bezkoder application." });
+   res.json({ message: "Welcome To JWT Authentication Application." });
 });
 
 app.get('*', (req, res) => {
